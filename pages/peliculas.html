@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Películas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/f89cf444de.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/estilos.css" />
+</head>
+
+<body class="fondoOscuro">
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="../index.html">NOMBRE</a></div>
+      <div class="navbarLinks">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a class="violetaBold" href="peliculas.html">Recomiéndenme</a></li>
+        </ul>
+      </div>
+    </nav>  
+  </header>
+  
+  <main>
+
+    <div id="peliculas">
+
+      <div id="vista">
+
+        <div>
+          <p class="titulo">Te gustan las pelis...</p>
+          <a href="#">
+            <div class="cardsTipos">
+              <div class="cardTipo" onclick="filtrarTipo('CLICHE')">
+                <p class="violetaBold">CLICHE</p>
+                <p>Cuanto más predecible, mejor</p>
+              </div>
+              <div class="cardTipo" onclick="filtrarTipo('PARA PENSAR')">
+                <p class="violetaBold">PARA PENSAR</p>
+                <p>Cuanto menos la entienda, mejor</p>
+              </div>
+              <div class="cardTipo" onclick="filtrarTipo('PLOT TWIST')">
+                <p class="violetaBold">CON PLOT TWIST</p>
+                <p>Cuanto menos me lo espere, mejor</p>
+              </div>
+              <div class="cardTipo" onclick="filtrarTipo('RARAS')">
+                <p class="violetaBold">RARAS</p>
+                <p>Cuanto más perturbadora, mejor</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div>
+          <p class="titulo">Elegí un género</p>
+          <select id="genero" class="dropdownGenero">
+            <option value="CRIMEN">Crimen</option>
+            <option value="SUSPENSO">Suspenso</option>
+            <option value="TERROR">Terror</option>
+            <option value="CIENCIA FICCION">Ciencia ficción</option>
+          </select>
+        </div>
+
+      </div>
+
+    </div>
+
+    <button id="btnFiltrar" onclick="filtrar()">RECOMIENDENME</button>
+
+  </main>
+
+  <script src="../js/script.js"></script>
+
+</body>
+</html>

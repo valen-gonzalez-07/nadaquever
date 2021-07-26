@@ -1,0 +1,136 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+header{
+    padding: 3% 10% 3% 10%;
+}
+
+h1{
+    color: rgba(255, 255, 255, 87%);
+    font-size: 4rem;
+}
+
+a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 87%);;
+    font-weight: 300;
+}
+
+p{
+    color: rgba(255, 255, 255, 87%);
+    font-weight: 300;
+}
+
+option{
+    color: #121212;
+}
+
+.logo{
+    font-size: 1.5rem;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: transparent;
+}
+
+.navbarLinks ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.navbarLinks li{
+    padding-right: 10%;
+    display: block;
+}
+
+.violetaBold{
+    color: #BB86FC;
+    font-weight: 500;
+}
+
+.fondoOscuro{
+    background-color: #121212;
+}
+
+.titulo{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.cardsTipos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardTipo{
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 12%);
+    padding: 1% 2% 1% 2%;
+    margin-bottom: 3%; 
+}
+
+#btnFiltrar{
+    margin-top: 3%;
+    padding: 1%;
+    background-color: #BB86FC;
+    color: #121212;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.dropdownGenero{
+    background-color: transparent;
+    width: 30%;
+    color: rgba(255, 255, 255, 87%);
+    padding: 1%;
+    border-radius: 5px;
+}
+
+.genero{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.infoGenero{
+    margin-right: 7%;
+}
+
+.iconoGenero{
+    color: #BB86FC;
+    margin-right: 1%;
+}
+
+.informacion{
+    width: 70%;
+}
+
+.imagen{
+    width: 300px;
+    margin-right: 0;
+    
+}
+
+.info{
+    display: flex;
+    margin-bottom: 3%;
+    align-items: flex-end;
+    justify-content: space-between;
+}
