@@ -3,26 +3,40 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Películas</title>
+    <title>Nada que ver</title>
+    <link rel="shortcut icon" href="media/icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/f89cf444de.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body class="fondoOscuro">
-    <header>
-        <nav class="navbar">
-          <div class="logo"><a href="index.html">NOMBRE</a></div>
+    <header >
+        <nav class="animated animation-LtoR navbar" data-delay="10">
+          <div><a href="index.html"><img src="media/posiblelogo.png" alt="logo" class="logo"/></a></div>
           <div class="navbarLinks">
             <ul>
               <li><a class="violetaBold" href="index.html">Inicio</a></li>
-              <li><a href="pages/peliculas.html">Recomiéndenme</a></li>
+              <li><a href="pages/peliculas.html">Buscá tu peli</a></li>
+              <li><a href="pages/lista.html">Tu lista</a></li>
             </ul>
           </div>
-        </nav>  
+        </nav> 
       </header>
-    
+
+      <main >
+        <div>
+          <h1 class="animate__animated animate__bounceInLeft fast animate__delay-5s">¿NADA QUE VER?</h1>
+          <h2 class="animate__animated animate__flipInX animate__delay-3s">No molestes a tus amigos,</h2>
+          <h2 class="animate__animated animate__flipInX animate__delay-4s">para eso estamos NOSOTROS.</h2>
+        </div>
+      </main>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <script src="js/index.js"></script>
 </body>
 </html>

@@ -17,7 +17,12 @@ header{
 
 h1{
     color: rgba(255, 255, 255, 87%);
-    font-size: 4rem;
+    font-size: 3.5rem;
+}
+
+h2{
+    color: rgba(255, 255, 255, 87%);
+    font-size: 2.5rem;
 }
 
 a{
@@ -35,8 +40,12 @@ option{
     color: #121212;
 }
 
+.fondoOscuro{
+    background-color: #121212;
+}
+
 .logo{
-    font-size: 1.5rem;
+    width: 30%;
 }
 
 .navbar{
@@ -57,16 +66,35 @@ option{
 
 .navbarLinks li{
     padding-right: 10%;
+}
+
+.violeta{
+    color: #BB86FC;
+}
+
+.displayNone {
+    display: none;
+}
+
+.displayBlock {
     display: block;
 }
 
 .violetaBold{
     color: #BB86FC;
     font-weight: 500;
+    margin: 8px 0px;
 }
 
-.fondoOscuro{
-    background-color: #121212;
+.blancoBold {
+    color: rgba(255, 255, 255, 87%);
+    font-weight: 700;
+}
+
+.negroBold {
+    color: #121212;
+    font-weight: 700;
+    margin: 8px 0px;
 }
 
 .titulo{
@@ -77,6 +105,7 @@ option{
 .cardsTipos{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .cardTipo{
@@ -86,13 +115,51 @@ option{
     margin-bottom: 3%; 
 }
 
-#btnFiltrar{
+.btnFiltrar {
+    width: auto;
     margin-top: 3%;
-    padding: 1%;
+    padding: 0.5% 1% 0.5% 1%;
     background-color: #BB86FC;
-    color: #121212;
-    font-weight: 700;
     border-radius: 5px;
+}
+
+.btnVioletaActivo {
+    width: auto;
+    margin-top: 3%;
+    background-color: #BB86FC;
+    border-radius: 5px;
+}
+
+.btnVioletaInactivo {
+    width: auto;
+    margin-top: 3%;
+    background-color: transparent;
+    border: 1px solid #BB86FC;
+    border-radius: 5px;
+    color: #BB86FC;
+}
+
+.btnSiguiente {
+    float: right;
+    font-weight: 700;
+    color: #121212;
+    background-color: #BB86FC;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10%;
+}
+
+.btnIcono {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5%; 
+}
+
+.btnsPeliculas {
+    display: flex;
+    justify-content: space-between;
 }
 
 .dropdownGenero{
@@ -118,14 +185,25 @@ option{
     margin-right: 1%;
 }
 
+.iconoNegro {
+    color: #121212;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.iconoVioleta {
+    color: #BB86FC;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
 .informacion{
     width: 70%;
 }
 
 .imagen{
-    width: 300px;
+    width: 250px;
     margin-right: 0;
-    
 }
 
 .info{
@@ -133,4 +211,108 @@ option{
     margin-bottom: 3%;
     align-items: flex-end;
     justify-content: space-between;
+}
+
+
+.peliculaLista {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fondoTrailer {
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(18, 18, 18, 0.7)
+}
+
+.iconoCerrar {
+    color: white;
+    width: 100px;
+}
+
+.fast {
+    --animate-delay: 0.5s;
+}
+
+.slow {
+    --animate-duration: 1s;
+}
+
+.animated {
+    position: relative;
+}
+
+.animated * {
+    opacity: 0;
+}
+
+.animated.animate-in * {
+    animation: hideText 1s 1.5s forwards;
+}
+
+.animated.animate-in:before,
+.animated.animate-in:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 10;
+}
+
+.animated.animate-in:before {
+    background-color:#121212 ;    
+}
+
+.animated.animate-in:after {
+    background-color:#121212 ;
+    background-image: url(../media/bg.png);
+    background-repeat: no-repeat;
+    background-size: 80vh;
+    background-position: center;
+    animation-delay: 2.5s;
+}
+
+.animated.animation-LtoR.animate-in:before {
+    animation: LtoRKeyframe .6s ease;
+}
+
+.animated.animation-LtoR.animate-in:after {
+    animation: LtoRKeyframe 2s ease;
+}
+
+@keyframes hideText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes LtoRKeyframe {
+    0% {
+        width: 0;
+        height: 80vh;
+        left: 0;
+    }
+    65% {
+        width: 100%;
+        height: 80vh;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        height: 80vh;
+        left: 100%;
+    }
 }

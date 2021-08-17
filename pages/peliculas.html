@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Películas</title>
+    <title>Nada que ver | Buscá tu peli</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/f89cf444de.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/estilos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body class="fondoOscuro">
   <header>
     <nav class="navbar">
-      <div class="logo"><a href="../index.html">NOMBRE</a></div>
+      <div><a href="../index.html"><img src="../media/posiblelogo.png" alt="logo" class="logo"/></a></div>
       <div class="navbarLinks">
         <ul>
           <li><a href="../index.html">Inicio</a></li>
-          <li><a class="violetaBold" href="peliculas.html">Recomiéndenme</a></li>
+          <li><a class="violetaBold" href="peliculas.html">Buscá tu peli</a></li>
+          <li><a href="lista.html">Tu lista</a></li>
         </ul>
       </div>
     </nav>  
@@ -31,32 +33,30 @@
       <div id="vista">
 
         <div>
-          <p class="titulo">Te gustan las pelis...</p>
-          <a href="#">
+          <p class="titulo animate__animated animate__bounceInLeft">Te gustan las pelis...</p>
             <div class="cardsTipos">
-              <div class="cardTipo" onclick="filtrarTipo('CLICHE')">
+              <div class="cardTipo animate__animated animate__flipInX fast animate__delay-2s" onclick="filtrarTipo('0', 'CLICHE')">
                 <p class="violetaBold">CLICHE</p>
                 <p>Cuanto más predecible, mejor</p>
               </div>
-              <div class="cardTipo" onclick="filtrarTipo('PARA PENSAR')">
+              <div class="cardTipo animate__animated animate__flipInX fast animate__delay-3s" onclick="filtrarTipo('1', 'PARA PENSAR')">
                 <p class="violetaBold">PARA PENSAR</p>
                 <p>Cuanto menos la entienda, mejor</p>
               </div>
-              <div class="cardTipo" onclick="filtrarTipo('PLOT TWIST')">
+              <div class="cardTipo animate__animated animate__flipInX fast animate__delay-4s" onclick="filtrarTipo('2', 'PLOT TWIST')">
                 <p class="violetaBold">CON PLOT TWIST</p>
                 <p>Cuanto menos me lo espere, mejor</p>
               </div>
-              <div class="cardTipo" onclick="filtrarTipo('RARAS')">
+              <div class="cardTipo animate__animated animate__flipInX fast animate__delay-5s" onclick="filtrarTipo('3', 'RARAS')">
                 <p class="violetaBold">RARAS</p>
                 <p>Cuanto más perturbadora, mejor</p>
               </div>
             </div>
-          </a>
         </div>
         
         <div>
-          <p class="titulo">Elegí un género</p>
-          <select id="genero" class="dropdownGenero">
+          <p class="titulo animate__animated animate__bounceInLeft animate__delay-3s">Elegí un género</p>
+          <select id="genero" class="dropdownGenero animate__animated animate__flipInX animate__delay-4s">
             <option value="CRIMEN">Crimen</option>
             <option value="SUSPENSO">Suspenso</option>
             <option value="TERROR">Terror</option>
@@ -68,11 +68,18 @@
 
     </div>
 
-    <button id="btnFiltrar" onclick="filtrar()">RECOMIENDENME</button>
+    <button class="btnFiltrar animate__animated animate__backInLeft animate__delay-5s" id="btnFiltrar" onclick="filtrar()">
+      <p class="negroBold">BUSCAR</p> 
+    </button>
 
   </main>
 
-  <script src="../js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="../js/objeto.js"></script>
+  <script src="../js/peliculas.js"></script>
+  <script src="../js/lista.js"></script>
+
+
 
 </body>
 </html>
