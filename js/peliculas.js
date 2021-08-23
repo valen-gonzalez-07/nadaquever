@@ -5,8 +5,11 @@ const pelicula = (peliculas) => {
         divVista.innerHTML +=
         `
         <div class="info" id="${peliculas[i].titulo}">
+            <div>
+                <p class="titulo">Te recomendamos:</p>
+            </div>
             <div class="informacion">
-                <h1>${peliculas[i].titulo}</h1>
+                <p class="h1">${peliculas[i].titulo}</p>
                 <div class="genero">
                     <p class="infoGenero">${peliculas[i].genero}</p>
                     <i class="far fa-calendar-alt iconoGenero"></i>
@@ -22,7 +25,7 @@ const pelicula = (peliculas) => {
                     <p>${peliculas[i].protagonistas}</p>
                 </div>
             </div>
-            <div>
+            <div class="informacionImagen">
                 <img src=${peliculas[i].img} class="imagen" />
                 <div class="btnsPeliculas">
                     <div class="btnVioletaInactivo btnIcono" onclick="verTrailer('${peliculas[i].iframe}')">
@@ -30,8 +33,8 @@ const pelicula = (peliculas) => {
                         <p class="violetaBold">TRAILER</p>
                     </div>
                     <div class="btnVioletaInactivo btnIcono agregarLista" onclick="agregarLista('${indicador}', '${peliculas[i].titulo}')">
-                        <i class="fas fa-plus-circle iconoVioleta iconoAgregar"></i>
-                        <i class="fas fa-check-circle iconoNegro iconoAgregado" style="display: none"></i>
+                        <i id="agregar${indicador}" class="fas fa-plus-circle iconoVioleta iconoAgregar"></i>
+                        <i id="agregado${indicador}" class="fas fa-check-circle iconoNegro iconoAgregado" style="display: none"></i>
                         <p class="violetaBold" id="${indicador}">MI LISTA</p>
                     </div>
                 <div>
@@ -49,7 +52,15 @@ const pelicula = (peliculas) => {
             let divNoVisible = document.getElementsByClassName("info");
             divNoVisible[i].style.display = "none";
         }
-    }
+
+        let siguiente = document.getElementsByClassName("info");
+        if (siguiente.length == 1){
+            let boton = document.getElementsByClassName("btnSiguiente");
+            boton[0].style.display = "none";
+        }else {
+            $(".btnSiguiente").css("display", "flex")
+        }
+    }  
 }
 
 let indicadorP = 1;
@@ -63,11 +74,6 @@ function cambiarPelicula(titulo){
     if (indicadorP == siguiente.length){
         indicadorP = 0;
     }
-    let actual = siguiente[indicadorP]
-    console.log(actual)
-    if (actual == undefined){
-        eliminada.style.display = "flex";
-    } //ERROR
 }
 
 let tipo = "";
@@ -111,13 +117,12 @@ function agregarLista(indicador, titulo){
     miLista.push(objPeliculaGuardada);
 
     localStorage.setItem("titulos", JSON.stringify(miLista));
-    $(".iconoAgregar").hide();
-    $(".iconoAgregado").show();
+    $("#agregado" + indicador).show();
+    $("#agregar" + indicador).hide();
     let btnVioletaActivo = document.getElementsByClassName("btnVioletaInactivo btnIcono agregarLista");
     btnVioletaActivo[indicador].style.backgroundColor = "#BB86FC";
     let negroBold = document.getElementById(indicador);
-    negroBold.style.color = "#121212";
-    
+    negroBold.style.color = "#121212"; 
 }
 
 function agregarLista(indicador, titulo){
@@ -141,8 +146,8 @@ function agregarLista(indicador, titulo){
         }
         miLista.push(objPeliculaGuardada)
         localStorage.setItem("titulos", JSON.stringify(miLista))
-        $(".iconoAgregar").hide();
-        $(".iconoAgregado").show();
+        $("#agregado" + indicador).show();
+        $("#agregar" + indicador).hide();
         let btnVioletaActivo = document.getElementsByClassName("btnVioletaInactivo btnIcono agregarLista");
         btnVioletaActivo[indicador].style.backgroundColor = "#BB86FC";
         let negroBold = document.getElementById(indicador);
@@ -150,8 +155,8 @@ function agregarLista(indicador, titulo){
     }else {
         miLista = miLista.filter((pel) => pel.titulo != titulo);
         localStorage.setItem("titulos", JSON.stringify(miLista));
-        $(".iconoAgregar").show();
-        $(".iconoAgregado").hide();
+        $("#agregado" + indicador).show();
+        $("#agregar" + indicador).hide();
         let btnVioletaInactivo = document.getElementsByClassName("btnVioletaInactivo btnIcono agregarLista");
         btnVioletaInactivo[indicador].style.backgroundColor = "transparent";
         let violeta = document.getElementById(indicador);
@@ -174,7 +179,8 @@ function verTrailer(iframe){
 function removeTrailer() {
     $(".fondoTrailer").fadeOut("fast")
     let removerContenido = document.getElementsByClassName("fondoTrailer")
-    removerContenido[0].remove();  
+    removerContenido[0].remove();
+    console.clear();  // PREGUNTAR
 }
 
 

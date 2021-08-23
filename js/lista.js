@@ -1,7 +1,17 @@
 
 window.onload = function(){
     miLista = JSON.parse(localStorage.getItem("titulos"));
-    cargarLista(miLista);
+
+    if (miLista.length == 0){
+        let mensajeListaVacia = document.getElementById("mensaje");
+        mensajeListaVacia.innerHTML = `<div><p class="titulo">Tu lista está vacía :(</p>
+                                        <p class="subtitulo">¡Empezá a agregar películas!</p></div>`
+    }else {
+        let mensajeListaCargada = document.getElementById("mensaje");
+        mensajeListaCargada.innerHTML = `<div><p class="titulo">Tu lista</p></div>`
+    }
+
+    cargarLista(miLista)
 }
 
 function cargarLista(miLista){
@@ -10,10 +20,10 @@ function cargarLista(miLista){
     miLista.forEach((pelicula)=> {
         peliculaAgregada.innerHTML +=
         `
-        <div class="peliculaLista animate__animated" id="${pelicula.titulo}">
+        <div class="peliculaLista" id="${pelicula.titulo}">
             <img src="${pelicula.img}" />
-            <p class="blancoBold">${pelicula.titulo}</p>
-            <div class="btnVioletaActivo btnIcono" onclick="quitarLista('${pelicula.titulo}')">
+            <p class="subtitulo uppercase">${pelicula.titulo}</p>
+            <div class="btnVioletaIcono btnIcono" onclick="quitarLista('${pelicula.titulo}')">
                 <i class="fas fa-minus-circle iconoNegro"></i>
                 <p class="negroBold">QUITAR</p>
             </div>
@@ -23,14 +33,10 @@ function cargarLista(miLista){
 }
 
 function quitarLista(titulo){
-
-    // document.getElementById(titulo).classList.add("animate__zoomOutDown");
-    document.getElementById(titulo).style.display = "none"
-    
+    document.getElementById(titulo).style.display = "none";
     miLista = JSON.parse(localStorage.getItem("titulos"));
     miLista = miLista.filter((lista) => lista.titulo != titulo);
     localStorage.setItem("titulos", JSON.stringify(miLista));
-
 }
 
 

@@ -16,13 +16,18 @@
 <body class="fondoOscuro">
     <header >
         <nav class="animated animation-LtoR navbar" data-delay="10">
-          <div><a href="index.html"><img src="media/posiblelogo.png" alt="logo" class="logo"/></a></div>
-          <div class="navbarLinks">
-            <ul>
+          <div class="logo"><a href="index.html"><img src="media/posiblelogo.png" alt="logo" /></a></div>
+          <div>
+            <ul class="navbarLinks">
               <li><a class="violetaBold" href="index.html">Inicio</a></li>
-              <li><a href="pages/peliculas.html">Buscá tu peli</a></li>
-              <li><a href="pages/lista.html">Tu lista</a></li>
+              <li><a class="blanco" href="pages/peliculas.html">Buscá tu peli</a></li>
+              <li><a class="blanco" href="pages/lista.html">Tu lista</a></li>
             </ul>
+          </div>
+          <div class="burguer">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
           </div>
         </nav> 
       </header>
@@ -30,13 +35,15 @@
       <main >
         <div>
           <h1 class="animate__animated animate__bounceInLeft fast animate__delay-5s">¿NADA QUE VER?</h1>
-          <h2 class="animate__animated animate__flipInX animate__delay-3s">No molestes a tus amigos,</h2>
-          <h2 class="animate__animated animate__flipInX animate__delay-4s">para eso estamos NOSOTROS.</h2>
+          <h2 class="animate__animated animate__bounceInLeft animate__delay-4s">No te precupes, <br /> para eso estamos nosotros.</h2>
         </div>
+
+        <button class="btnVioletaActivo negroBold animate__animated animate__bounceInLeft animate__delay-5s"><a href="pages/peliculas.html">BUSCÁ UNA PELI</a></button>
       </main>
 
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
       <script src="js/index.js"></script>
+      <script src="js/responsive.js"></script>
 </body>
 </html>
