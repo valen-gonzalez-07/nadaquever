@@ -259,7 +259,8 @@ option{
 
     .btnVioletaIcono {
         padding: 1.5% 2.5%;
-        margin-top: 7%;
+        margin-bottom: 10%;
+        margin-top: 4%;
     }
 
 }
@@ -310,6 +311,11 @@ option{
         font-size: 2rem;
     }
 
+    .h1 {
+        font-size: 2rem;
+        margin-top: 5vh;
+    }
+
     h2 {
         margin-top: 10vh;
         font-size: 1.5rem;
@@ -352,6 +358,68 @@ option{
     .vhNecesario{
         height: 60vh;
     }
+
+    .info{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .informacion {
+        width: 100%;
+        padding-top: 5%;
+    }
+
+    .informacionImagen {
+        width: 90%;
+    }
+
+    .imagen {
+        width: 80%;
+        margin-top: 5%;
+        margin-right: 10%;
+    }
+
+    .iconoGenero {
+        margin-right: 2%;
+    }
+
+    iframe {
+        width: 400px;
+        height: auto;
+    }
+
+    .contenidoTrailer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .iconoCerrar {
+        margin-top: 5%;
+        font-size: 27px;
+    }
+
+    .peliculaLista {
+        width: 90%;
+    }
+
+    .peliculaLista img {
+        width: 50%;
+        margin-bottom: 4%;
+    }
+
+    .btnIcono {
+        width: 30% !important; 
+    }
+
+    .btnVioletaIcono {
+        padding: 1% 1%;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
@@ -392,7 +460,12 @@ option{
         font-size: 2rem;
         margin-top: 15vh;
     }
-    
+
+    .h1 {
+        font-size: 2rem;
+        margin-top: 5vh;
+    }
+
     h2 {
         font-size: 1.5rem;
         margin-top: 10vh;
@@ -430,6 +503,64 @@ option{
     .btnFiltrar{
         margin-top: 7%;
         padding: 1% 1.5%;
+    }
+
+    .info{
+        flex-wrap: nowrap;
+        align-items: flex-end;
+    }
+
+    .informacion {
+        width: 55%;
+        padding-top: 5%;
+    }
+
+    .informacionImagen {
+        width: 40%;
+    }
+
+    .imagen {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .iconoGenero {
+        margin-right: 2%;
+    }
+
+    .contenidoTrailer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .iconoCerrar {
+        margin-top: 5%;
+        font-size: 30px;
+    }
+
+    #peliculaAgregada {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .peliculaLista {
+        width: 40%;
+        margin-right: 4%;
+        margin-left: 4%;
+    }
+
+    .peliculaLista img {
+        width: 80%;
+        margin-bottom: 6%;
+    }
+
+    .btnVioletaIcono {
+        padding: 1% 1%;
+        margin-top: 5%;
+        margin-bottom: 10%;
     }
 }
 
@@ -483,6 +614,11 @@ option{
         margin-top: 15vh;
     }
 
+    .h1 {
+        font-size: 2.5rem;
+        margin-top: 7vh;
+    }
+
     h2 {
         font-size: 1.8rem;
         margin-top: 10vh;
@@ -520,6 +656,66 @@ option{
         margin-top: 7%;
         padding: 1% 1.5%;
     }
+
+    .info{
+        flex-wrap: nowrap;
+        align-items: flex-end;
+    }
+
+    .informacion {
+        width: 60%;
+        padding-top: 5%;
+    }
+
+    .informacionImagen {
+        width: 35%;
+    }
+
+    .imagen {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .iconoGenero {
+        margin-right: 2%;
+    }
+
+    .contenidoTrailer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .iconoCerrar {
+        margin-top: 5%;
+        font-size: 30px;
+    }
+
+    #peliculaAgregada {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .peliculaLista {
+        width: 40%;
+        margin-right: 4%;
+        margin-left: 4%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .peliculaLista img {
+        width: 80%;
+        margin-bottom: 6%;
+    }
+
+    .btnVioletaIcono {
+        padding: 1% 1%;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
 }
 
 @media (min-width: 993px) {
@@ -543,6 +739,11 @@ option{
     h1 {
         font-size: 3.5rem;
         margin-top: 10vh;
+    }
+
+    .h1 {
+        font-size: 3.5rem;
+        margin-top: 3vh;
     }
 
     h2 {
@@ -582,6 +783,66 @@ option{
     .btnFiltrar{
         margin-top: 5%;
         padding: 0.5% 1%;
+    }
+
+    .info{
+        flex-wrap: nowrap;
+        align-items: flex-end;
+    }
+
+    .informacion {
+        width: 60%;
+        padding-top: 5%;
+    }
+
+    .informacionImagen {
+        width: 35%;
+    }
+
+    .imagen {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .iconoGenero {
+        margin-right: 2%;
+    }
+
+    .contenidoTrailer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .iconoCerrar {
+        margin-top: 5%;
+        font-size: 30px;
+    }
+
+    #peliculaAgregada {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .peliculaLista {
+        width: 40%;
+        margin-right: 4%;
+        margin-left: 4%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .peliculaLista img {
+        width: 80%;
+        margin-bottom: 6%;
+    }
+
+    .btnVioletaIcono {
+        padding: 1% 1%;
+        margin-top: 5%;
+        margin-bottom: 10%;
     }
 }
 
@@ -671,7 +932,6 @@ option{
 
 .iconoGenero{
     color: #BB86FC;
-    /* margin-right: 1%; */
 }
 
 .iconoNegro {
