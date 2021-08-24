@@ -4,7 +4,7 @@ window.onload = function(){
 
     if (miLista.length == 0){
         let mensajeListaVacia = document.getElementById("mensaje");
-        mensajeListaVacia.innerHTML = `<div><p class="titulo">Tu lista está vacía :(</p>
+        mensajeListaVacia.innerHTML = `<div class="vhNecesario"><p class="titulo">Tu lista está vacía :(</p>
                                         <p class="subtitulo">¡Empezá a agregar películas!</p></div>`
     }else {
         let mensajeListaCargada = document.getElementById("mensaje");

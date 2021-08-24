@@ -5,10 +5,8 @@ const pelicula = (peliculas) => {
         divVista.innerHTML +=
         `
         <div class="info" id="${peliculas[i].titulo}">
-            <div>
-                <p class="titulo">Te recomendamos:</p>
-            </div>
-            <div class="informacion">
+             <div class="informacion">
+                <p class="titulo">Te recomendamos ver:</p>
                 <p class="h1">${peliculas[i].titulo}</p>
                 <div class="genero">
                     <p class="infoGenero">${peliculas[i].genero}</p>
