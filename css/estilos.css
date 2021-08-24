@@ -371,7 +371,7 @@ option{
     }
 
     .informacionImagen {
-        width: 90%;
+        width: 100%;
     }
 
     .imagen {
@@ -412,7 +412,7 @@ option{
     }
 
     .btnIcono {
-        width: 30% !important; 
+        width: 40% !important; 
     }
 
     .btnVioletaIcono {
@@ -743,7 +743,7 @@ option{
 
     .h1 {
         font-size: 3.5rem;
-        margin-top: 3vh;
+        margin-top: 10vh;
     }
 
     h2 {
@@ -791,17 +791,18 @@ option{
     }
 
     .informacion {
-        width: 60%;
+        width: 67%;
         padding-top: 5%;
     }
 
     .informacionImagen {
-        width: 35%;
+        width: 30%;
     }
 
     .imagen {
-        width: 100%;
-        margin-top: 5%;
+        width: 70%;
+        margin-right: 15%;
+        margin-left: 15%;
     }
 
     .iconoGenero {
