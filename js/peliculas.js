@@ -126,7 +126,6 @@ function agregarLista(indicador, titulo){
 function agregarLista(indicador, titulo){
 
     let miListaStorage = JSON.parse(localStorage.getItem("titulos"))
-
     let miLista = []
 
     if(miListaStorage!=null) {
@@ -153,8 +152,8 @@ function agregarLista(indicador, titulo){
     }else {
         miLista = miLista.filter((pel) => pel.titulo != titulo);
         localStorage.setItem("titulos", JSON.stringify(miLista));
-        $("#agregado" + indicador).show();
-        $("#agregar" + indicador).hide();
+        $("#agregado" + indicador).hide();
+        $("#agregar" + indicador).show();
         let btnVioletaInactivo = document.getElementsByClassName("btnVioletaInactivo btnIcono agregarLista");
         btnVioletaInactivo[indicador].style.backgroundColor = "transparent";
         let violeta = document.getElementById(indicador);
