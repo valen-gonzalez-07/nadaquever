@@ -11,7 +11,7 @@ window.onload = function(){
         mensajeListaCargada.innerHTML = `<div><p class="titulo">Tu lista</p></div>`
     }
 
-    cargarLista(miLista)
+    cargarLista(miLista);
 }
 
 function cargarLista(miLista){

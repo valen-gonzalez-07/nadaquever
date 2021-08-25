@@ -56,7 +56,7 @@ const pelicula = (peliculas) => {
             let boton = document.getElementsByClassName("btnSiguiente");
             boton[0].style.display = "none";
         }else {
-            $(".btnSiguiente").css("display", "flex")
+            $(".btnSiguiente").css("display", "flex");
         }
     }  
 }
@@ -106,33 +106,15 @@ function filtrar(){
 let miLista = [];
 
 function agregarLista(indicador, titulo){
-    let peliculaGuardada = objPeliculas.filter((pel) => pel.titulo == titulo);
-    let objPeliculaGuardada = {
-        titulo: peliculaGuardada[0].titulo,
-        duracion: peliculaGuardada[0].duracion,
-        img: peliculaGuardada[0].img,
-    };
-    miLista.push(objPeliculaGuardada);
 
-    localStorage.setItem("titulos", JSON.stringify(miLista));
-    $("#agregado" + indicador).show();
-    $("#agregar" + indicador).hide();
-    let btnVioletaActivo = document.getElementsByClassName("btnVioletaInactivo btnIcono agregarLista");
-    btnVioletaActivo[indicador].style.backgroundColor = "#BB86FC";
-    let negroBold = document.getElementById(indicador);
-    negroBold.style.color = "#121212"; 
-}
-
-function agregarLista(indicador, titulo){
-
-    let miListaStorage = JSON.parse(localStorage.getItem("titulos"))
-    let miLista = []
+    let miListaStorage = JSON.parse(localStorage.getItem("titulos"));
+    let miLista = [];
 
     if(miListaStorage!=null) {
         miLista = miListaStorage;
     }
 
-    let peliculaYaAgregada = miLista.filter((pelicula) => pelicula.titulo == titulo)
+    let peliculaYaAgregada = miLista.filter((pelicula) => pelicula.titulo == titulo);
 
     if(peliculaYaAgregada.length == 0){
         let peliculaGuardada = objPeliculas.filter((pel) => pel.titulo == titulo)
@@ -141,8 +123,8 @@ function agregarLista(indicador, titulo){
             duracion: peliculaGuardada[0].duracion,
             img: peliculaGuardada[0].img,
         }
-        miLista.push(objPeliculaGuardada)
-        localStorage.setItem("titulos", JSON.stringify(miLista))
+        miLista.push(objPeliculaGuardada);
+        localStorage.setItem("titulos", JSON.stringify(miLista));
         $("#agregado" + indicador).show();
         $("#agregar" + indicador).hide();
         let btnVioletaActivo = document.getElementsByClassName("btnVioletaInactivo btnIcono agregarLista");
@@ -156,8 +138,8 @@ function agregarLista(indicador, titulo){
         $("#agregar" + indicador).show();
         let btnVioletaInactivo = document.getElementsByClassName("btnVioletaInactivo btnIcono agregarLista");
         btnVioletaInactivo[indicador].style.backgroundColor = "transparent";
-        let violeta = document.getElementById(indicador);
-        violeta.style.color = "#BB86FC";
+        let violetaBold = document.getElementById(indicador);
+        violetaBold.style.color = "#BB86FC";
     }
 }
 
@@ -177,7 +159,5 @@ function removeTrailer() {
     $(".fondoTrailer").fadeOut("fast")
     let removerContenido = document.getElementsByClassName("fondoTrailer")
     removerContenido[0].remove();
-    console.clear();  // PREGUNTAR
+    console.clear();
 }
-
-

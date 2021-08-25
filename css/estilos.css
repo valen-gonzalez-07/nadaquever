@@ -791,22 +791,22 @@ option{
     }
 
     .informacion {
-        width: 67%;
-        padding-top: 5%;
+        width: 70%;
+        padding-top: 2%;
     }
 
     .informacionImagen {
-        width: 30%;
+        width: 25%;
     }
 
     .imagen {
-        width: 70%;
-        margin-right: 15%;
-        margin-left: 15%;
+        width: 75%;
+        margin-right: 7%;
+        margin-left: 7%;
     }
 
     .iconoGenero {
-        margin-right: 2%;
+        margin-right: 1.5%;
     }
 
     .contenidoTrailer {
